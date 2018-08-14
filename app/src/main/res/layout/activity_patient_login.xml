@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.mymedic.PatientHome"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <fragment
+            android:name="com.example.user.mymedic.PatientTopBar"
+            android:id="@+id/patient_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/activity_patient_top_bar" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="8"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/patient_signin"
+            android:textSize="40dp"
+            android:textColor="@color/secondaryTextColor"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/username"
+            android:layout_marginTop="25dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/password"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/signin"
+            android:layout_marginHorizontal="120dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/or"
+            android:textSize="50dp"
+            android:textColor="@color/secondaryTextColor"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/signup"
+            android:layout_marginHorizontal="120dp"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

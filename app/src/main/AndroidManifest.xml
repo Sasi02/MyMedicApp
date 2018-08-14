@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainSelector">
+        <activity android:name=".SignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PatientHome"></activity>
+        <activity android:name=".PatientHome" />
+        <activity android:name=".PatientMyProfile" />
+        <activity android:name=".PatientLogin" />
+        <activity android:name=".PatientSignUp"></activity>
     </application>
 
 </manifest>
