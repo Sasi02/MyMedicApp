@@ -14,16 +14,79 @@
         android:layout_height="0dp"
         android:layout_weight="2">
 
-    <fragment
-        android:name="com.example.user.mymedic.PatientTopBar"
-        android:id="@+id/patient_top_bar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/activity_patient_top_bar" />
+        <fragment
+            android:name="com.example.user.mymedic.PatientTopBar"
+            android:id="@+id/patient_top_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/activity_patient_top_bar" />
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_margin="10dp">
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/patient_my_profile"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"/>
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/patient_my_prescription"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/myprofile_icon"
+                android:scaleType="fitCenter"
+                android:layout_margin="5dp"/>
+
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/patient_drug_usage"
+                android:scaleType="fitCenter"
+                android:layout_margin="5dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
