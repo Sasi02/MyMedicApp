@@ -37,24 +37,24 @@
         <ImageButton
             android:id="@+id/patientButton"
             android:scaleType="fitCenter"
-            android:padding="50dp"
+            android:padding="25dp"
             android:backgroundTint="@color/secondaryColor"
             android:elevation="2dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:srcCompat="@mipmap/ic_patient_selection"
+            app:srcCompat="@drawable/patient"
             android:layout_below="@+id/patient_top_bar"
             android:layout_weight="1" />
 
         <ImageButton
             android:id="@+id/phamacistButton"
             android:scaleType="fitCenter"
-            android:padding="50dp"
+            android:padding="25dp"
             android:backgroundTint="@color/secondaryColor"
             android:elevation="2dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:srcCompat="@mipmap/ic_phamacist_selection"
+            app:srcCompat="@drawable/pharmacist"
             android:layout_below="@+id/imageButton"
             android:layout_weight="1"  />
     </LinearLayout>
