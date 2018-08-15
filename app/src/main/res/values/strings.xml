@@ -18,8 +18,11 @@
     <string name="email">Email</string>
     <string name="gender">Gender</string>
     <string name="signin">Sign in</string>
-    <string name="signup">Sign Up</string>
+    <string name="firstsignup">Sign-up - First Step</string>
+    <string name="signup">Sign-up</string>
     <string name="or">or</string>
+    <string name="next">Next</string>
     <string name="patient_signin">Patient Sign-in</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="notification">Notifications</string>
 </resources>
