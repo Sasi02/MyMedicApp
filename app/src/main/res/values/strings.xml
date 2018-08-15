@@ -18,11 +18,18 @@
     <string name="email">Email</string>
     <string name="gender">Gender</string>
     <string name="signin">Sign in</string>
-    <string name="firstsignup">Sign-up - First Step</string>
-    <string name="signup">Sign-up</string>
+    <string name="signup">Sign Up</string>
     <string name="or">or</string>
-    <string name="next">Next</string>
     <string name="patient_signin">Patient Sign-in</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="phamacistsignup">Phamacist Sign Up</string>
+    <string name="phamacyregno">Phamacy Reg. No.</string>
+    <string name="phamacyname">Phamacy Name</string>
+    <string name="address1">Address 1</string>
+    <string name="address2">Address 2</string>
+    <string name="city">City</string>
+    <string name="agreeterms">Agree Terms and Condition</string>
     <string name="notification">Notifications</string>
+    <string name="firstsignup">Sign Up - First Step</string>
+    <string name="next">Next</string>
 </resources>

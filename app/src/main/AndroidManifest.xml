@@ -21,6 +21,7 @@
         <activity android:name=".SignUp" />
         <activity android:name=".SignUp1" />
         <activity android:name=".NotificationPage"></activity>
+        <activity android:name=".PhamacistSignUp"/>
     </application>
 
 </manifest>
