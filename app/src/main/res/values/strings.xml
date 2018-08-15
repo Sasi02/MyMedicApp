@@ -11,6 +11,7 @@
     <string name="last_Name">Last Name</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="confirmpassword">Confirm Password</string>
     <string name="nic">NIC</string>
     <string name="dob">Date of Birth</string>
     <string name="phone">Phone</string>
@@ -20,5 +21,5 @@
     <string name="signup">Sign Up</string>
     <string name="or">or</string>
     <string name="patient_signin">Patient Sign-in</string>
-
+    <string name="forgot_password">Forgot Password?</string>
 </resources>

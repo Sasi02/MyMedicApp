@@ -41,7 +41,8 @@
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:text="@string/signup"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:textColor="@color/secondaryTextColor"/>
 
             <EditText
                 android:id="@+id/firstname"
@@ -95,7 +96,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:text="Next" />
+                android:text="Next"
+                android:layout_marginHorizontal="120dp"/>
 
 
         </LinearLayout>
