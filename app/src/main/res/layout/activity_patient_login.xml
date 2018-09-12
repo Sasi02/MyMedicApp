@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.mymedic.PatientHome"
+    tools:context="com.example.user.mymedic.PatientLogin"
     android:orientation="vertical"
     android:weightSum="10">
 
@@ -59,6 +59,7 @@
             android:clickable="true"/>
 
         <Button
+            android:id="@+id/patientSignin"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
@@ -74,6 +75,7 @@
             android:textAlignment="center"/>
 
         <Button
+            android:id="@+id/patientSignup"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="@string/signup"
