@@ -7,14 +7,20 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import com.example.user.mymedic.Database.UserDAO;
+import com.example.user.mymedic.Model.User;
+
 import java.util.Calendar;
 import java.util.Date;
 
 public class AddDrugSchedule extends AppCompatActivity {
 
     EditText startDate;
+    EditText test;
     Calendar calendar;
     DatePickerDialog datePickerDialog;
+    UserDAO userData;
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +28,7 @@ public class AddDrugSchedule extends AppCompatActivity {
         setContentView(R.layout.activity_add_drug_schedule);
 
         startDate = (EditText)findViewById(R.id.editText7);
+        test = (EditText)findViewById(R.id.editText5);
 
         startDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,5 +48,6 @@ public class AddDrugSchedule extends AppCompatActivity {
 
             }
         });
+
     }
 }

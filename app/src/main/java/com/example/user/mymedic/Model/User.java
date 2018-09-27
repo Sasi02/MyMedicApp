@@ -3,25 +3,24 @@ package com.example.user.mymedic.Model;
 import java.util.Date;
 
 public class User {
-    int id;
-    String firstName;
-    String lastName;
-    String initials;
-    Date dob;
-    String phone;
-    String gender;
-    String bloodGroup;
-    String genDiseases;
-    String allergies;
-    String operations;
 
-
+    private int id;
+    private String firstName;
+    private String lastName;
+    private String initials;
+    private Date dob;
+    private String phone;
+    private String gender;
+    private String bloodGroup;
+    private String genDiseases;
+    private String allergies;
+    private String operations;
 
     public User(){}
 
-    public User(String fname, String lname){
-        this.firstName = fname;
-        this.lastName = lname;
+    public User(String firstName, String lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public User(int id, String firstName, String lastName, String initials, Date dob,
@@ -94,7 +93,7 @@ public class User {
     }
 
     public void setGender(String gender) {
-        gender = gender;
+        this.gender = gender;
     }
 
     public String getBloodGroup() {
