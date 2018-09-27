@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.user.mymedic.PatientLogin"
     android:orientation="vertical"
-    android:padding="15dp"
-    android:background="@drawable/background_image_1"
-    android:gravity="center">
+    android:weightSum="10"
+    android:fillViewport="true"
+    android:background="@drawable/background_image_1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <fragment
+            android:name="com.example.user.mymedic.PatientTopBar"
+            android:id="@+id/patient_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/activity_patient_top_bar" />
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -17,6 +30,7 @@
         android:text="@string/welcome_Msg"
         android:textStyle="bold"
         android:textSize="35sp"
+        android:layout_marginTop="45dp"
         android:textColor="@color/secondaryTextColor"
         android:textAlignment="center"
         android:scrollHorizontally="false"/>
@@ -25,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:hint="@string/username"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:textAlignment="center"
         android:textSize="20sp"/>
 
@@ -42,7 +56,7 @@
         android:text="@string/forgot_password"
         android:gravity="end"
         android:textSize="15sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:textColor="@color/secondaryTextColor"
         android:clickable="true"
         android:focusable="true"/>
@@ -51,36 +65,30 @@
         android:id="@+id/patientSignin"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/signin"
+        android:layout_marginTop="35dp"
+        android:text="@string/sign_in"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_gravity="center"
         android:background="@color/colorAccent"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:text="@string/or"
-        android:textSize="30sp"
+        android:textAlignment="center"
         android:textColor="@color/secondaryTextColor"
-        android:textAlignment="center"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/patientSignup"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:text="@string/signup"
+        android:text="@string/sign_up"
         android:layout_marginTop="5dp"
         android:textSize="18sp"
+        android:layout_gravity="center"
         android:textStyle="bold"
         android:background="@color/colorAccent"/>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:scaleType="fitCenter"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/heart_with_wave" />
 
 </LinearLayout>

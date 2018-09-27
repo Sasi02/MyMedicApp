@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.user.mymedic.SignUp"
     android:orientation="vertical"
-    android:weightSum="10">
+    android:weightSum="10"
+    android:background="@drawable/background_image_1">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:orientation="vertical">
 
@@ -40,7 +40,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:text="@string/firstsignup"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:textColor="@color/secondaryTextColor"/>
 
             <EditText
@@ -72,6 +72,7 @@
 
             <EditText
                 android:id="@+id/phone"
+                android:inputType="phone"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
@@ -79,6 +80,7 @@
 
             <EditText
                 android:id="@+id/email"
+                android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
@@ -96,7 +98,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/next"
-                android:layout_marginHorizontal="120dp"/>
+                android:background="@color/colorAccent"/>
 
 
         </LinearLayout>

@@ -49,13 +49,14 @@
                 android:layout_marginRight="5dp"/>
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/imageButton4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/patient_my_prescription"
+                app:srcCompat="@drawable/patient_drug_usage"
                 android:scaleType="fitCenter"
-                android:layout_marginLeft="5dp"/>
+                android:layout_margin="5dp" />
+
 
         </LinearLayout>
 
@@ -77,14 +78,13 @@
 
 
             <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/patient_drug_usage"
-                android:scaleType="fitCenter"
-                android:layout_margin="5dp" />
-
+                  android:id="@+id/imageButton2"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  app:srcCompat="@android:drawable/ic_menu_manage"
+                  android:scaleType="fitCenter"
+                  android:layout_marginLeft="5dp"/>
         </LinearLayout>
 
     </LinearLayout>
