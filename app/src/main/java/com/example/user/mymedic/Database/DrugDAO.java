@@ -137,7 +137,7 @@ public class DrugDAO {
         return retDrug;
     }
 
-    public boolean updateUser(Drug drug){
+    public boolean updateDrug(Drug drug){
         String sqlQuery = DatabaseMaster.Drug.COLUMN_NAME_ID +" = ?";
         String id = String.valueOf(drug.getId());
         String[] selectionArgs = {id};

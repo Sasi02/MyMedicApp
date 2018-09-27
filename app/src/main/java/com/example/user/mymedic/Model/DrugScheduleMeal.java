@@ -2,20 +2,41 @@ package com.example.user.mymedic.Model;
 
 public class DrugScheduleMeal {
 
-    int id;
-    String method;
-    double noOfPills;
-    String selectedMeal;
-    String beforeOrAfter;
+    private int id;
+    private String method;
+    private double noOfPills;
+    private String selectedMeal;
+    private String beforeOrAfter;
+    private int prescriptionId;
+    private int drugId;
 
     public DrugScheduleMeal() {}
 
-    public DrugScheduleMeal(int id, String method, double noOfPills, String selectedMeal, String beforeOrAfter) {
+    public DrugScheduleMeal(int id, String method, double noOfPills, String selectedMeal, String beforeOrAfter,
+                            int prescriptionId, int drugId) {
         this.id = id;
         this.method = method;
         this.noOfPills = noOfPills;
         this.selectedMeal = selectedMeal;
         this.beforeOrAfter = beforeOrAfter;
+        this.prescriptionId = prescriptionId;
+        this.drugId = drugId;
+    }
+
+    public int getPrescriptionId() {
+        return prescriptionId;
+    }
+
+    public void setPrescriptionId(int prescriptionId) {
+        this.prescriptionId = prescriptionId;
+    }
+
+    public int getDrugId() {
+        return drugId;
+    }
+
+    public void setDrugId(int drugId) {
+        this.drugId = drugId;
     }
 
     public int getId() {
