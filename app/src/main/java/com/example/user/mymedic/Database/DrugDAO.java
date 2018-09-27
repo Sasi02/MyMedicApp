@@ -1,16 +1,16 @@
-package com.example.user.mymedic.Helper;
+package com.example.user.mymedic.Database;
 
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
-public class DrugScheduleMealDAO {
+public class DrugDAO {
 
     private SQLiteDatabase mDatabase;
     private DatabaseHandler dbHelper;
     private Context mContext;
 
-    public DrugScheduleMealDAO(Context context) {
+    public DrugDAO(Context context) {
         this.mContext = context;
         dbHelper = new DatabaseHandler(context);
 
@@ -28,4 +28,6 @@ public class DrugScheduleMealDAO {
     public void close(){
         dbHelper.close();
     }
+
+
 }

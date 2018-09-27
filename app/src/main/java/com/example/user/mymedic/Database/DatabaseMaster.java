@@ -1,4 +1,4 @@
-package com.example.user.mymedic.Helper;
+package com.example.user.mymedic.Database;
 
 import android.provider.BaseColumns;
 
