@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.mymedic.AddDrug"
     android:weightSum="10"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background_image_1">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             android:id="@+id/patient_top_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout="@layout/activity_patient_top_bar" />
+            tools:layout="@layout/activity_patient_top_bar"/>
 
     </RelativeLayout>
 
@@ -44,8 +45,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:text="@string/DrugMan"
-            android:padding="20dp"
-            android:textAlignment="center"/>
+            android:padding="20dp"/>
 
         <EditText
             android:id="@+id/editText1"
@@ -53,8 +53,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:text="@string/DrugName"
-            android:padding="20dp"
-            android:textAlignment="center"/>
+            android:padding="20dp"/>
 
         <EditText
             android:id="@+id/editText2"
@@ -62,8 +61,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:text="@string/DrugDosage"
-            android:padding="20dp"
-            android:textAlignment="center"/>
+            android:padding="20dp"/>
 
         <Button
             android:id="@+id/button"
@@ -72,7 +70,8 @@
             android:text="@string/save"
             android:gravity="center"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:background="@color/colorAccent"/>
 
 
     </LinearLayout>
