@@ -39,15 +39,16 @@
             android:orientation="horizontal"
             android:weightSum="2">
 
-            <ImageButton
+            <Button
                 android:id="@+id/imageButton1"
+                android:hint="@string/my_profile"
+                android:textStyle="bold"
+                android:textSize="40dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/patient_my_profile"
                 android:layout_weight="1"
-                android:layout_marginRight="5dp"
-                android:background="@color/HomeButtonColor2"/>
+                android:layout_marginRight="10dp"/>
 
             <ImageButton
                 android:id="@+id/imageButton2"
@@ -57,7 +58,7 @@
                 app:srcCompat="@drawable/patient_my_prescription"
                 android:scaleType="fitCenter"
                 android:layout_marginLeft="5dp"
-                android:background="@color/HomeButtonColor1"/>
+                android:background="@color/secondaryLightColor"/>
 
         </LinearLayout>
 
@@ -77,7 +78,7 @@
                 android:scaleType="fitCenter"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/HomeButtonColor1"/>
+                android:background="@color/secondaryLightColor"/>
 
 
             <ImageButton
@@ -89,7 +90,7 @@
                 android:scaleType="fitCenter"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/HomeButtonColor2"/>
+                android:background="@color/secondaryLightColor"/>
 
         </LinearLayout>
 

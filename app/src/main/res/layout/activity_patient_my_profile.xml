@@ -13,11 +13,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9">
+        android:layout_weight="35">
 
         <fragment
-            android:name="com.example.user.mymedic.PatientTopBar"
             android:id="@+id/patient_top_bar"
+            android:name="com.example.user.mymedic.PatientTopBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/activity_patient_top_bar" />
@@ -60,7 +60,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/colorPrimary"
                     android:clickable="true"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:padding="0dp"
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
@@ -85,7 +85,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/colorPrimary"
                     android:clickable="true"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:padding="0dp"
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
@@ -109,7 +109,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/colorPrimary"
                     android:clickable="true"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:padding="0dp"
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
@@ -135,7 +135,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/colorPrimary"
                     android:clickable="true"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:padding="2dp"
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
@@ -161,7 +161,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/colorPrimary"
                     android:clickable="true"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:padding="0dp"
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
@@ -186,7 +186,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/colorPrimary"
                     android:clickable="true"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:padding="0dp"
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
@@ -212,7 +212,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/colorPrimary"
                     android:clickable="true"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:padding="0dp"
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
@@ -238,7 +238,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/colorPrimary"
                     android:clickable="true"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:padding="0dp"
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
@@ -264,7 +264,7 @@
                     android:layout_margin="8dp"
                     android:background="@color/colorPrimary"
                     android:clickable="true"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:padding="0dp"
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />

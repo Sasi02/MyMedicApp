@@ -8,7 +8,8 @@
     tools:context="com.example.user.mymedic.DrugManRepSche"
     tools:showIn="@layout/activity_drug_man_rep_sche"
     android:orientation="vertical"
-    android:weightSum="10">
+    android:weightSum="10"
+    android:background="@drawable/background_image_1">
 
     <RelativeLayout
         android:layout_width="match_parent"
