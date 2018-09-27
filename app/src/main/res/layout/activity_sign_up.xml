@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.user.mymedic.SignUp"
     android:orientation="vertical"
-    android:weightSum="10"
-    android:background="@drawable/background_image_1">
+    android:weightSum="10">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,24 +15,25 @@
         android:layout_weight="2">
 
         <fragment
-            android:name="com.example.user.mymedic.PatientTopBar"
-            android:id="@+id/patient_top_bar"
+            android:name="com.example.user.mymedic.TopBar"
+            android:id="@+id/top_bar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout="@layout/activity_patient_top_bar" />
+            tools:layout="@layout/activity_top_bar" />
 
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8">
+        android:layout_weight="8"
+        android:padding="15dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -47,55 +48,52 @@
                 android:id="@+id/firstname"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:hint="@string/first_name" />
+                android:hint="@string/first_name"
+                android:textAlignment="center"/>
 
             <EditText
                 android:id="@+id/lastname"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:hint="@string/last_Name" />
-
-            <EditText
-                android:id="@+id/nic"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:hint="@string/nic" />
+                android:hint="@string/last_Name"
+                android:textAlignment="center"/>
 
             <EditText
                 android:id="@+id/dob"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:hint="@string/dob" />
+                android:hint="@string/dob"
+                android:textAlignment="center"/>
 
             <EditText
                 android:id="@+id/phone"
-                android:inputType="phone"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:hint="@string/phone" />
+                android:hint="@string/phone"
+                android:textAlignment="center"/>
 
             <EditText
                 android:id="@+id/email"
-                android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:hint="@string/email" />
+                android:hint="@string/email"
+                android:textAlignment="center"/>
 
             <EditText
                 android:id="@+id/gender"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:hint="@string/gender" />
+                android:hint="@string/gender"
+                android:textAlignment="center"/>
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/next"
                 android:background="@color/colorAccent"/>

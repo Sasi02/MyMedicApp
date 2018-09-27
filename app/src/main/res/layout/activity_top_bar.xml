@@ -6,7 +6,7 @@
     android:layout_height="90dp"
     tools:context="com.example.user.mymedic.TopBar"
     android:layout_alignParentTop="true"
-    android:background="@color/secondaryDarkColor"
+    android:background="@color/secondaryTextColor"
     android:gravity="center"
     android:orientation="horizontal"
     android:weightSum="5"
