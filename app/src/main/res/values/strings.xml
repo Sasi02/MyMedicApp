@@ -52,5 +52,16 @@
     <string name="takeAfter">Take after,</string>
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
+    <string name="password_recovery">Password Recovery</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="ok">OK</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="initials">Initials</string>
+    <string name="address">Address</string>
+    <string name="telephone">Telephone</string>
+    <string name="emergency_no">Emergency No</string>
     <string name="dinner">Dinner</string>
 </resources>
