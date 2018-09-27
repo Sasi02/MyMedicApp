@@ -169,5 +169,65 @@ public class UserDAO {
         return userList;
     }
 
+    public User findById(int id){
+        User retUser = new User();
+        String sDate;
+        String[] dateSeparated;
+        Date date;
+
+        String sqlQuery = "SELET * FROM "+ DatabaseMaster.Users.TABLE_NAME +" WHERE "+
+                DatabaseMaster.Users.COLUMN_NAME_ID +" = "+ id;
+
+        Cursor cursor = mDatabase.rawQuery(sqlQuery, null);
+
+        if(cursor.getCount() == 1){
+            sDate = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_DOB));
+
+            dateSeparated = sDate.split("/");
+            date = new Date(Integer.parseInt(dateSeparated[3]),Integer.parseInt(dateSeparated[2]),Integer.parseInt(dateSeparated[1]));
+
+            retUser.setId(cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_ID)));
+            retUser.setFirstName(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_FNAME)));
+            retUser.setLastName(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_LNAME)));
+            retUser.setInitials(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_INITIALS)));
+            retUser.setDob(date);
+            retUser.setPhone(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_PHONE)));
+            retUser.setGender(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_GENDER)));
+            retUser.setBloodGroup(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_BGROUP)));
+            retUser.setGenDiseases(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_GENDISEASES)));
+            retUser.setAllergies(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_ALLERGIES)));
+            retUser.setOperations(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_OPERATIONS)));
+        }
+        return retUser;
+    }
+
+    public boolean updateUser(User user){
+        String sqlQuery = DatabaseMaster.Users.COLUMN_NAME_ID +" = ?";
+        String id = String.valueOf(user.getId());
+        String[] selectionArgs = {id};
+
+        ContentValues values = new ContentValues();
+        values.put(DatabaseMaster.Users.COLUMN_NAME_FNAME, user.getFirstName());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_LNAME, user.getLastName());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_INITIALS, user.getInitials());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_DOB, user.getDob().toString());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_PHONE, user.getPhone());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_GENDER, user.getGender());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_BGROUP, user.getBloodGroup());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_GENDISEASES, user.getGenDiseases());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_ALLERGIES, user.getAllergies());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_OPERATIONS, user.getOperations());
+
+        int count = mDatabase.update(
+                DatabaseMaster.Users.TABLE_NAME,
+                values,
+                sqlQuery,
+                selectionArgs
+        );
+        if(count == 0)
+            return false;
+        else
+            return true;
+    }
 
 }
