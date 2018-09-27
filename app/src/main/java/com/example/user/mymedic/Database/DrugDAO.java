@@ -23,7 +23,7 @@ public class DrugDAO {
         }
     }
 
-    private void Open() throws SQLException {
+    public void Open() throws SQLException {
         mDatabase = dbHelper.getWritableDatabase();
     }
 

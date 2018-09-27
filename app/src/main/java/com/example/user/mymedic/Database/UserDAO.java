@@ -27,7 +27,7 @@ public class UserDAO {
         }
     }
 
-    private void Open() throws SQLException{
+    public void Open() throws SQLException{
         mDatabase = dbHelper.getWritableDatabase();
     }
 
