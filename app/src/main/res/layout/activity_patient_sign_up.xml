@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.user.mymedic.PatientSignUp"
     android:orientation="vertical"
-    android:weightSum="10"
-    android:fillViewport="true"
-    android:background="@drawable/background_image_1">
+    android:weightSum="10">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,82 +15,74 @@
         android:layout_weight="2">
 
         <fragment
-            android:name="com.example.user.mymedic.PatientTopBar"
-            android:id="@+id/patient_top_bar"
+            android:name="com.example.user.mymedic.TopBar"
+            android:id="@+id/top_bar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout="@layout/activity_patient_top_bar" />
+            tools:layout="@layout/activity_top_bar" />
 
     </RelativeLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
-        android:orientation="vertical"
-        android:layout_margin="10dp">
+        android:padding="15dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="20dp"
-            android:text="@string/sign_up"
-            android:textSize="20sp"
-            android:textColor="@color/secondaryTextColor"/>
-
-        <EditText
-            android:id="@+id/nic"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:hint="@string/nic"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
 
-        <EditText
-            android:id="@+id/dob"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/dob"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:text="@string/signup"
+                android:textSize="30sp"
+                android:textColor="@color/secondaryTextColor"/>
 
-        <EditText
-            android:id="@+id/phone"
-            android:inputType="phone"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/phone" />
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="@string/username" />
 
-        <EditText
-            android:id="@+id/email"
-            android:inputType="textEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/email" />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"/>
 
-        <EditText
-            android:id="@+id/gender"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:hint="@string/gender" />
+            <EditText
+                android:id="@+id/cpassowrd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/confirmpassword"
+                android:inputType="textPassword"/>
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/agreeterms"
-            android:layout_margin="10dp"/>
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="@string/sign_up"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorAccent"/>
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agreeterms"
+                android:layout_margin="10dp"/>
 
 
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="@string/signup"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"/>
 
-    </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
