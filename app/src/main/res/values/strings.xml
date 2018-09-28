@@ -68,4 +68,6 @@
     <string name="useremailstr">sachithrukshanmail@gmail.com</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="setting">Settings</string>
+    <string name="drug_manager">Drug Manager</string>
 </resources>

@@ -9,7 +9,7 @@
     <color name="secondaryColor">#e1f5fe</color>
     <color name="secondaryLightColor">#ffffff</color>
     <color name="secondaryDarkColor">#afc2cb</color>
-    <color name="primaryTextColor">#000000</color>
+    <color name="primaryTextColor">#1d1d1d</color>
     <color name="secondaryTextColor">#000000</color>
     <color name="transparent">@null</color>
     <color name="HomeButtonColor1">#1565c0</color>

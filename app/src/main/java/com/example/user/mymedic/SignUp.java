@@ -166,6 +166,7 @@ public class SignUp extends AppCompatActivity {
                             return;
                         }
 
+                        //Assign Values To User
                         user.setFirstName(firstName);
                         user.setDob(TypeConverter.toDate(dob));
                         user.setLastName(lastName);
@@ -174,11 +175,28 @@ public class SignUp extends AppCompatActivity {
                         user.setInitials(initials);
                         user.setEmail(email);
 
+                        //Add User To DB
+                        UserData.Open();
+                        UserData.add(user);
+                        UserData.close();
+
+                        //Check if User Added
+                        User newUser = null;
+                        UserData.Open();
+                        try{newUser = UserData.findById(1);}catch(Exception e){newUser=null;}
+                        UserData.close();
+
+                        //Set First Time Done
                         SharedPreferences perfs = getSharedPreferences("prefs", MODE_PRIVATE);
                         SharedPreferences.Editor editor = perfs.edit();
                         editor.putBoolean("firstStart", false);
                         editor.apply();
-                        startActivity(new Intent(SignUp.this, PatientHome.class));
+
+                        //Restart App
+                        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(i);
+
                     }
                 }
         );

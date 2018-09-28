@@ -33,6 +33,7 @@
             android:layout_height="0dp"
             android:layout_weight="8"
             android:orientation="vertical"
+            android:background="@color/secondaryLightColor"
             android:weightSum="2"
             android:layout_margin="10dp">
 
@@ -44,26 +45,57 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <Button
-                    android:id="@+id/imageButton1"
-                    android:hint="@string/my_profile"
-                    android:textStyle="bold"
-                    android:textSize="40dp"
+                <LinearLayout
+                    android:id="@+id/myProfile"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="fitCenter"
                     android:layout_weight="1"
-                    android:layout_marginRight="10dp"/>
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="false">
 
-                <ImageButton
-                    android:id="@+id/imageButton2"
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/my_profile"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_profile"
+                        android:textAlignment="center"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/docView"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/patient_my_prescription"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    android:background="@color/secondaryLightColor"/>
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="false">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/doctor_view"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/doctorView"
+                        android:textAlignment="center"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -74,28 +106,58 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <ImageButton
-                    android:id="@+id/imageButton3"
+                <LinearLayout
+                    android:id="@+id/myDrugs"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/paient_my_drugs"
-                    android:scaleType="fitCenter"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/secondaryLightColor"/>
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="false">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/my_drug"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_drugs"
+                        android:textAlignment="center"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
 
-                <ImageButton
-                    android:id="@+id/imageButton4"
+                <LinearLayout
+                    android:id="@+id/drugManager"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/patient_drug_usage"
-                    android:scaleType="fitCenter"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/secondaryLightColor"/>
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="false">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/drug_usage"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/drug_manager"
+                        android:textAlignment="center"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
             </LinearLayout>
 
