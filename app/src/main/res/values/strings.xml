@@ -57,7 +57,7 @@
     <string name="current_password">Current Password</string>
     <string name="new_password">New Password</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="ok">OK</string>
+    <string name="ok">Okay</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="initials">Initials</string>
@@ -71,4 +71,5 @@
     <string name="close">Close</string>
     <string name="setting">Settings</string>
     <string name="drug_manager">Drug Manager</string>
+    <string name="dateOfBirth">Date of Birth</string>
 </resources>

@@ -166,6 +166,7 @@
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
+        android:id="@+id/home_nav"
         app:headerLayout="@layout/activity_drawer_header"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

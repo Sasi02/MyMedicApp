@@ -13,7 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="35">
+        android:layout_weight="2">
 
         <fragment
             android:id="@+id/patient_top_bar"
@@ -24,10 +24,15 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="8">
 
             <TextView
                 android:layout_width="fill_parent"
@@ -43,18 +48,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="30"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:text="@string/initials"
+                    android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/initials"
+                    android:id="@+id/profileInitials"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:layout_weight="1"
+                    android:layout_weight="24"
+                    android:focusable="false"
                     android:hint="@string/initials" />
 
                 <ImageView
-                    android:id="@+id/edit"
+                    android:id="@+id/profileInitialsEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -65,21 +83,34 @@
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="30"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp">
 
-                <EditText
-                    android:id="@+id/firstname"
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:text="@string/first_name"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/profileFirstName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="24"
+                    android:focusable="false"
                     android:hint="@string/first_name" />
 
                 <ImageView
+                    android:id="@+id/profileFirstNameEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -90,20 +121,34 @@
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="30"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp">
 
-                <EditText
-                    android:id="@+id/lastname"
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:text="@string/last_Name"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/profileLastName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="24"
+                    android:focusable="false"
                     android:hint="@string/last_Name" />
 
                 <ImageView
+                    android:id="@+id/profileLastNameEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -114,48 +159,34 @@
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="30"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp">
 
-                <EditText
-                    android:id="@+id/dob"
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:inputType="date"
-                    android:hint="@string/dob" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:text="@string/email"
+                    android:textSize="15sp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/profileEmail"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:background="@color/colorPrimary"
-                    android:clickable="true"
+                    android:layout_weight="24"
                     android:focusable="false"
-                    android:padding="2dp"
-                    android:src="@android:drawable/ic_menu_edit"
-                    tools:ignore="contentDescription" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/nic"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:hint="@string/nic" />
+                    android:hint="@string/email" />
 
                 <ImageView
+                    android:id="@+id/profileEmailEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -166,21 +197,34 @@
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="30"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp">
 
-                <EditText
-                    android:id="@+id/address"
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:hint="@string/address" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:text="@string/dateOfBirth"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/profileDOB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="24"
+                    android:focusable="false"
+                    android:hint="@string/dateOfBirth" />
 
                 <ImageView
+                    android:id="@+id/profileDOBEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -191,48 +235,34 @@
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
             </LinearLayout>
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="30"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp">
 
-                <EditText
-                    android:id="@+id/username"
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:hint="@string/username" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:text="@string/telephone"
+                    android:textSize="15sp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/profilePhone"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:background="@color/colorPrimary"
-                    android:clickable="true"
+                    android:layout_weight="24"
                     android:focusable="false"
-                    android:padding="0dp"
-                    android:src="@android:drawable/ic_menu_edit"
-                    tools:ignore="contentDescription" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/telephone"
-                    android:inputType="phone"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
                     android:hint="@string/telephone" />
 
                 <ImageView
+                    android:id="@+id/profilePhoneEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -243,43 +273,18 @@
                     android:src="@android:drawable/ic_menu_edit"
                     tools:ignore="contentDescription" />
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/emergency_no"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:inputType="number"
-                    android:layout_weight="1"
-                    android:hint="@string/emergency_no" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:background="@color/colorPrimary"
-                    android:clickable="true"
-                    android:focusable="false"
-                    android:padding="0dp"
-                    android:src="@android:drawable/ic_menu_edit"
-                    tools:ignore="contentDescription" />
-
-            </LinearLayout>
-
             <Button
+                android:id="@+id/profileOkButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginTop="50dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginTop="50dp"
                 android:background="@color/colorAccent"
                 android:text="@string/ok" />
         </LinearLayout>
+    </ScrollView>
+
 
 
 </LinearLayout>
