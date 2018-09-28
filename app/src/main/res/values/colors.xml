@@ -14,4 +14,5 @@
     <color name="transparent">@null</color>
     <color name="HomeButtonColor1">#1565c0</color>
     <color name="HomeButtonColor2">#b2ff59</color>
+    <color name="warningColor">#f00</color>
 </resources>

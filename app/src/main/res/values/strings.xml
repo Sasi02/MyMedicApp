@@ -64,4 +64,8 @@
     <string name="telephone">Telephone</string>
     <string name="emergency_no">Emergency No</string>
     <string name="dinner">Dinner</string>
+    <string name="usernamestr">Sachith Rukshan</string>
+    <string name="useremailstr">sachithrukshanmail@gmail.com</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>

@@ -1,8 +1,12 @@
 package com.example.user.mymedic.Model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+public class User implements Parcelable {
     int id;
     String firstName;
     String lastName;
@@ -14,7 +18,7 @@ public class User {
     String genDiseases;
     String allergies;
     String operations;
-
+    String email;
 
 
     public User(){}
@@ -77,6 +81,16 @@ public class User {
         return dob;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+
     public void setDob(Date dob) {
         this.dob = dob;
     }
@@ -128,4 +142,52 @@ public class User {
     public void setOperations(String operations) {
         this.operations = operations;
     }
+
+    protected User(Parcel in) {
+        id = in.readInt();
+        firstName = in.readString();
+        lastName = in.readString();
+        initials = in.readString();
+        long tmpDob = in.readLong();
+        dob = tmpDob != -1 ? new Date(tmpDob) : null;
+        phone = in.readString();
+        gender = in.readString();
+        bloodGroup = in.readString();
+        genDiseases = in.readString();
+        allergies = in.readString();
+        operations = in.readString();
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(firstName);
+        dest.writeString(lastName);
+        dest.writeString(initials);
+        dest.writeLong(dob != null ? dob.getTime() : -1L);
+        dest.writeString(phone);
+        dest.writeString(gender);
+        dest.writeString(bloodGroup);
+        dest.writeString(genDiseases);
+        dest.writeString(allergies);
+        dest.writeString(operations);
+    }
+
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 }

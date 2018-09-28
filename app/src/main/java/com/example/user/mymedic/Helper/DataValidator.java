@@ -10,7 +10,7 @@ public class DataValidator {
     }
 
     public static boolean isPhoneNumber(String phone){
-        return phone.matches("^([\+]?94)?[0]?[1-9][0-9]{8}$");
+        return phone.matches("^([+]?94)?[0]?[1-9][0-9]{8}$");
     }
 
     public static boolean isNIC(String nic){
@@ -23,5 +23,14 @@ public class DataValidator {
 
     public static boolean isText(String text){
         return text.matches("^[A-Za-z ]$");
+    }
+
+    public static boolean isEmpty(String str){
+        str = str.trim();
+        return str.isEmpty();
+    }
+
+    public static boolean isEmail(String email){
+        return email.matches("^[a-z1-9.]+[@][a-z]+\\.[a-z]{2,5}$");
     }
 }

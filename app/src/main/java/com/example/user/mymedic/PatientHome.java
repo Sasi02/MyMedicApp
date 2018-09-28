@@ -1,7 +1,10 @@
 package com.example.user.mymedic;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +22,9 @@ public class PatientHome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_home);
 
-        imageButton1 =(ImageButton)findViewById(R.id.imageButton1);
+        firstTime();
+
+        /*imageButton1 =(ImageButton)findViewById(R.id.imageButton1);
         //imageButton2 =(ImageButton)findViewById(R.id.imageButton2);
         //imageButton3 =(ImageButton)findViewById(R.id.imageButton3);
         //imageButton4 =(ImageButton)findViewById(R.id.imageButton4);
@@ -33,6 +38,15 @@ public class PatientHome extends AppCompatActivity {
                     }
                 }
         );
+*/
+    }
 
+    private void firstTime(){
+        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        boolean firstStart = prefs.getBoolean("firstStart", true);
+
+        if(firstStart){
+            startActivity(new Intent(PatientHome.this, SignUp.class));
+        }
     }
 }
