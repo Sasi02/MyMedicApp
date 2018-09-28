@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.mymedic.AddDrug"
     android:weightSum="10"
-    android:orientation="vertical"
-    android:background="@drawable/background_image_1">
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,7 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="15dp">
 
 
         <TextView
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="@string/DrugMan"
+            android:hint="@string/DrugMan"
             android:padding="20dp"/>
 
         <EditText
@@ -52,15 +52,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="@string/DrugName"
+            android:hint="@string/DrugName"
             android:padding="20dp"/>
 
         <EditText
             android:id="@+id/dosageEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:text="@string/DrugDosage"
+            android:inputType="numberDecimal"
+            android:hint="@string/DrugDosage"
             android:padding="20dp"/>
 
         <Button

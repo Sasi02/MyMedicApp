@@ -64,7 +64,7 @@ public class PrescriptionDAO {
                 DatabaseMaster.Prescription.COLUMN_NAME_USER_ID
         };
 
-        String sortOrder = DatabaseMaster.Prescription.COLUMN_NAME_ID + "ASC";
+        String sortOrder = DatabaseMaster.Prescription.COLUMN_NAME_ID + " ASC ";
 
         Cursor cursor = mDatabase.query(
                 DatabaseMaster.Prescription.TABLE_NAME,

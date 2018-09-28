@@ -41,11 +41,9 @@ public class DatabaseHandler extends SQLiteOpenHelper{
                     " `"+ DatabaseMaster.DrugScheduleHours.COLUMN_NAME_PRESCRIPTION_ID +"` INTEGER NOT NULL, " +
                     " `"+ DatabaseMaster.DrugScheduleHours.COLUMN_NAME_DRUG_ID +"` INTEGER NOT NULL, " +
                     " FOREIGN KEY ( `"+ DatabaseMaster.DrugScheduleHours.COLUMN_NAME_PRESCRIPTION_ID +"` ) REFERENCES " +
-                    " `"+ DatabaseMaster.Prescription.TABLE_NAME +"` ( `"+ DatabaseMaster.Prescription.COLUMN_NAME_ID +"` ) " +
-                    " ON DELETE CASCADE ON UPDATE CASCADE , " +
+                    " `"+ DatabaseMaster.Prescription.TABLE_NAME +"` ( `"+ DatabaseMaster.Prescription.COLUMN_NAME_ID +"` ), " +
                     " FOREIGN KEY ( `"+ DatabaseMaster.DrugScheduleHours.COLUMN_NAME_DRUG_ID +"` ) REFERENCES " +
                     " `"+ DatabaseMaster.Drug.TABLE_NAME +"` ( `"+ DatabaseMaster.Drug.COLUMN_NAME_ID +"` ) " +
-                    " ON DELETE CASCADE ON UPDATE CASCADE " +
                     " )";
 
     private static final String CREATE_TABLE_DRUG_SCHEDULE_MEALS =
@@ -58,11 +56,9 @@ public class DatabaseHandler extends SQLiteOpenHelper{
                     " `"+ DatabaseMaster.DrugScheduleMeal.COLUMN_NAME_PRESCRIPTION_ID +"` INTEGER NOT NULL, " +
                     " `"+ DatabaseMaster.DrugScheduleMeal.COLUMN_NAME_DRUG_ID +"` INTEGER NOT NULL, " +
                     " FOREIGN KEY ( `"+ DatabaseMaster.DrugScheduleMeal.COLUMN_NAME_PRESCRIPTION_ID +"` ) REFERENCES " +
-                    " `"+ DatabaseMaster.Prescription.TABLE_NAME +"` ( `"+ DatabaseMaster.Prescription.COLUMN_NAME_ID +"` )" +
-                    " ON DELETE CASCADE ON UPDATE CASCADE , " +
+                    " `"+ DatabaseMaster.Prescription.TABLE_NAME +"` ( `"+ DatabaseMaster.Prescription.COLUMN_NAME_ID +"` ), " +
                     " FOREIGN KEY ( `"+ DatabaseMaster.DrugScheduleMeal.COLUMN_NAME_DRUG_ID +"` ) REFERENCES " +
-                    " `"+ DatabaseMaster.Drug.TABLE_NAME +"` ( `"+ DatabaseMaster.Drug.COLUMN_NAME_ID +"`" +
-                    " ON DELETE CASCADE ON UPDATE CASCADE )" +
+                    " `"+ DatabaseMaster.Drug.TABLE_NAME +"` ( `"+ DatabaseMaster.Drug.COLUMN_NAME_ID +"` ) " +
                     " )";
 
     private static final String CREATE_TABLE_PRESCRIPTIONS =
@@ -76,8 +72,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
                     " `"+ DatabaseMaster.Prescription.COLUMN_NAME_EDATE +"` VARCHAR(50), " +
                     " `"+ DatabaseMaster.Prescription.COLUMN_NAME_USER_ID +"` INTEGER, " +
                     " FOREIGN KEY ( `"+ DatabaseMaster.Prescription.COLUMN_NAME_USER_ID +"` ) REFERENCES " +
-                    " `"+ DatabaseMaster.Users.TABLE_NAME +"` ( `"+ DatabaseMaster.Users.COLUMN_NAME_ID +"` " +
-                    " ON DELETE CASCADE ON UPDATE CASCADE ) " +
+                    " `"+ DatabaseMaster.Users.TABLE_NAME +"` ( `"+ DatabaseMaster.Users.COLUMN_NAME_ID +"` ) " +
                     " )";
 
     public DatabaseHandler(Context context) {

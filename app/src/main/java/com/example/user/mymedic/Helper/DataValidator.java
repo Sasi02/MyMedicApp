@@ -22,12 +22,16 @@ public class DataValidator {
     }
 
     public static boolean isText(String text){
-        return text.matches("^[A-Za-z ]$");
+        return text.matches("^[A-Za-z .]+$");
     }
 
     public static boolean isEmpty(String str){
         str = str.trim();
         return str.isEmpty();
+    }
+
+    public static boolean isEmpty(Double value){
+        return value==0.0;
     }
 
     public static boolean isEmail(String email){

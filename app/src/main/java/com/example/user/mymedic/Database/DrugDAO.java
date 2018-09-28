@@ -55,7 +55,7 @@ public class DrugDAO {
                 DatabaseMaster.Drug.COLUMN_NAME_DOSAGE
         };
 
-        String sortOrder = DatabaseMaster.Drug.COLUMN_NAME_ID + "ASC";
+        String sortOrder = DatabaseMaster.Drug.COLUMN_NAME_ID + " ASC";
 
         Cursor cursor = mDatabase.query(
                 DatabaseMaster.Drug.TABLE_NAME,
