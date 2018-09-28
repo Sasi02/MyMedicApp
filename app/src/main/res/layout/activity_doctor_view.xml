@@ -21,16 +21,142 @@
             tools:layout="@layout/activity_patient_top_bar" />
 
     </RelativeLayout>
-
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:text="@string/doctorView"
+        android:textColor="@color/primaryTextColor"
+        android:paddingTop="5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
         android:orientation="vertical"
         android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diseases"
+                    android:textSize="25sp"
+                    android:layout_weight="6"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_gravity="center_vertical"/>
+                <Button
+                    android:id="@+id/doctorViewDiseasesAddBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/secondaryDarkColor"
+                    android:text="@string/add"/>
+                <Button
+                    android:id="@+id/doctorViewDiseasesEditBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/secondaryDarkColor"
+                    android:text="@string/edit"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/doctorViewDiseasesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="10"
+                android:focusable="false"
+                android:background="@color/secondaryColor"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/allegies"
+                    android:textSize="25sp"
+                    android:layout_weight="6"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_gravity="center_vertical"/>
+                <Button
+                    android:id="@+id/doctorViewAllegiesAddBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/secondaryDarkColor"
+                    android:text="@string/add"/>
+                <Button
+                    android:id="@+id/doctorViewAllegiesEditBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/secondaryDarkColor"
+                    android:text="@string/edit"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/doctorViewAllegiesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="10"
+                android:focusable="false"
+                android:background="@color/secondaryColor"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/operations"
+                    android:textSize="25sp"
+                    android:layout_weight="6"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_gravity="center_vertical"/>
+                <Button
+                    android:id="@+id/doctorViewOperationsAddBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/secondaryDarkColor"
+                    android:text="@string/add"/>
+                <Button
+                    android:id="@+id/doctorViewOperationsEditBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@color/secondaryDarkColor"
+                    android:text="@string/edit"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/doctorViewOperationsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="10"
+                android:focusable="false"
+                android:background="@color/secondaryColor"/>
+        </LinearLayout>
 
 
+    </ScrollView>
 
-    </LinearLayout>
-
+    <Button
+        android:id="@+id/doctorViewApplyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="@color/primaryTextColor"
+        android:text="@string/apply"
+        android:textSize="20sp"/>
 </LinearLayout>

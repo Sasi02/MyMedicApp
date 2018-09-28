@@ -45,6 +45,7 @@ public class PatientMyProfile extends AppCompatActivity {
         DateOfBirth = (TextView) findViewById(R.id.profileDOB);
         Phone = (TextView) findViewById(R.id.profilePhone);
         Email = (TextView) findViewById(R.id.profileEmail);
+
         InitialsEditButton = (ImageView) findViewById(R.id.profileInitialsEdit);
         FirstNameEditButton = (ImageView) findViewById(R.id.profileFirstNameEdit);
         LastNameEditButton = (ImageView) findViewById(R.id.profileLastNameEdit);

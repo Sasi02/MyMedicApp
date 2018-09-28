@@ -42,6 +42,7 @@ public class UserDAO {
         values.put(DatabaseMaster.Users.COLUMN_NAME_DOB, TypeConverter.toString(user.getDob()));
         values.put(DatabaseMaster.Users.COLUMN_NAME_PHONE, user.getPhone());
         values.put(DatabaseMaster.Users.COLUMN_NAME_GENDER, user.getGender());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_EMAIL, user.getEmail());
         values.put(DatabaseMaster.Users.COLUMN_NAME_BGROUP, user.getBloodGroup());
         values.put(DatabaseMaster.Users.COLUMN_NAME_GENDISEASES, user.getGenDiseases());
         values.put(DatabaseMaster.Users.COLUMN_NAME_ALLERGIES, user.getAllergies());
@@ -67,6 +68,7 @@ public class UserDAO {
             DatabaseMaster.Users.COLUMN_NAME_DOB,
             DatabaseMaster.Users.COLUMN_NAME_PHONE,
             DatabaseMaster.Users.COLUMN_NAME_GENDER,
+            DatabaseMaster.Users.COLUMN_NAME_EMAIL,
             DatabaseMaster.Users.COLUMN_NAME_BGROUP,
             DatabaseMaster.Users.COLUMN_NAME_GENDISEASES,
             DatabaseMaster.Users.COLUMN_NAME_ALLERGIES,
@@ -98,6 +100,7 @@ public class UserDAO {
             tempUser.setDob(date);
             tempUser.setPhone(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_PHONE)));
             tempUser.setGender(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_GENDER)));
+            tempUser.setEmail(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_EMAIL)));
             tempUser.setBloodGroup(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_BGROUP)));
             tempUser.setGenDiseases(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_GENDISEASES)));
             tempUser.setAllergies(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_ALLERGIES)));
@@ -145,6 +148,7 @@ public class UserDAO {
                     tempUser.setDob(date);
                     tempUser.setPhone(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_PHONE)));
                     tempUser.setGender(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_GENDER)));
+                    tempUser.setEmail(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_EMAIL)));
                     tempUser.setBloodGroup(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_BGROUP)));
                     tempUser.setGenDiseases(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_GENDISEASES)));
                     tempUser.setAllergies(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_ALLERGIES)));
@@ -179,6 +183,7 @@ public class UserDAO {
             retUser.setDob(date);
             retUser.setPhone(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_PHONE)));
             retUser.setGender(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_GENDER)));
+            retUser.setEmail(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_EMAIL)));
             retUser.setBloodGroup(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_BGROUP)));
             retUser.setGenDiseases(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_GENDISEASES)));
             retUser.setAllergies(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_ALLERGIES)));
@@ -200,6 +205,7 @@ public class UserDAO {
         values.put(DatabaseMaster.Users.COLUMN_NAME_DOB, TypeConverter.toString(user.getDob()));
         values.put(DatabaseMaster.Users.COLUMN_NAME_PHONE, user.getPhone());
         values.put(DatabaseMaster.Users.COLUMN_NAME_GENDER, user.getGender());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_EMAIL, user.getEmail());
         values.put(DatabaseMaster.Users.COLUMN_NAME_BGROUP, user.getBloodGroup());
         values.put(DatabaseMaster.Users.COLUMN_NAME_GENDISEASES, user.getGenDiseases());
         values.put(DatabaseMaster.Users.COLUMN_NAME_ALLERGIES, user.getAllergies());
