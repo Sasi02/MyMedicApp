@@ -13,7 +13,6 @@
         <activity android:name=".PatientMyProfile" />
         <activity android:name=".SignUp"/>
         <activity android:name=".PatientSignUp" />
-        <activity android:name=".Drawer"/>
         <activity android:name=".PatientHome" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

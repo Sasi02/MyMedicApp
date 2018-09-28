@@ -14,8 +14,7 @@ public class User {
     String genDiseases;
     String allergies;
     String operations;
-
-
+    String email;
 
     public User(){}
 
@@ -63,6 +62,14 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getInitials() {
