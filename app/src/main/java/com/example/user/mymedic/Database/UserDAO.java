@@ -73,7 +73,7 @@ public class UserDAO {
             DatabaseMaster.Users.COLUMN_NAME_OPERATIONS
         };
 
-        String sortOrder = DatabaseMaster.Users.COLUMN_NAME_ID + "ASC";
+        String sortOrder = DatabaseMaster.Users.COLUMN_NAME_ID + " ASC ";
 
         Cursor cursor = mDatabase.query(
                 DatabaseMaster.Users.TABLE_NAME,

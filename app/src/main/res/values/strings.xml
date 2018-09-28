@@ -42,9 +42,10 @@
     <string name="sampleData">Sample</string>
     <string name="disease">Disease</string>
     <string name="discription">Discription</string>
-    <string name="startDate">Start Date (DD/MM/YYYY)</string>
-    <string name="endDate">End Date (DD/MM/YYYY)</string>
+    <string name="startDate">Start Date (YYYY/MM/DD)</string>
+    <string name="endDate">End Date (YYYY/MM/DD)</string>
     <string name="addDrug">Add Drugs</string>
+    <string name="addPrescription">Add Prescription</string>
     <string name="add">Add</string>
     <string name="selectDrug">Select a Drug</string>
     <string name="useDrug">Method of Drug Usage</string>

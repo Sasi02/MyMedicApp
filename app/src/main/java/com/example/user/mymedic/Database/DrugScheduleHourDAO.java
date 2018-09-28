@@ -59,7 +59,7 @@ public class DrugScheduleHourDAO {
                 DatabaseMaster.DrugScheduleHours.COLUMN_NAME_DRUG_ID
         };
 
-        String sortOrder = DatabaseMaster.DrugScheduleHours.COLUMN_NAME_ID + "ASC";
+        String sortOrder = DatabaseMaster.DrugScheduleHours.COLUMN_NAME_ID + " ASC ";
 
         Cursor cursor = mDatabase.query(
                 DatabaseMaster.DrugScheduleHours.TABLE_NAME,
