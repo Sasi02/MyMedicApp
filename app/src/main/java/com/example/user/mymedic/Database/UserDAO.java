@@ -197,7 +197,7 @@ public class UserDAO {
         values.put(DatabaseMaster.Users.COLUMN_NAME_FNAME, user.getFirstName());
         values.put(DatabaseMaster.Users.COLUMN_NAME_LNAME, user.getLastName());
         values.put(DatabaseMaster.Users.COLUMN_NAME_INITIALS, user.getInitials());
-        values.put(DatabaseMaster.Users.COLUMN_NAME_DOB, user.getDob().toString());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_DOB, TypeConverter.toString(user.getDob()));
         values.put(DatabaseMaster.Users.COLUMN_NAME_PHONE, user.getPhone());
         values.put(DatabaseMaster.Users.COLUMN_NAME_GENDER, user.getGender());
         values.put(DatabaseMaster.Users.COLUMN_NAME_BGROUP, user.getBloodGroup());

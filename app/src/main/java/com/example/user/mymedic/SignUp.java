@@ -186,11 +186,13 @@ public class SignUp extends AppCompatActivity {
                         try{newUser = UserData.findById(1);}catch(Exception e){newUser=null;}
                         UserData.close();
 
-                        //Set First Time Done
-                        SharedPreferences perfs = getSharedPreferences("prefs", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = perfs.edit();
-                        editor.putBoolean("firstStart", false);
-                        editor.apply();
+                        if(user!=null) {
+                            //Set First Time Done
+                            SharedPreferences perfs = getSharedPreferences("prefs", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = perfs.edit();
+                            editor.putBoolean("firstStart", false);
+                            editor.apply();
+                        }
 
                         //Restart App
                         Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
@@ -205,5 +207,10 @@ public class SignUp extends AppCompatActivity {
     private void resetFields(){
         FirstName.setBackgroundColor(getResources().getColor(R.color.secondaryLightColor));
         LastName.setBackgroundColor(getResources().getColor(R.color.secondaryLightColor));
+        Initals.setBackgroundColor(getResources().getColor(R.color.secondaryLightColor));
+        DOB.setBackgroundColor(getResources().getColor(R.color.secondaryLightColor));
+        Phone.setBackgroundColor(getResources().getColor(R.color.secondaryLightColor));
+        Email.setBackgroundColor(getResources().getColor(R.color.secondaryLightColor));
+        Gender.setBackgroundColor(getResources().getColor(R.color.secondaryLightColor));
     }
 }

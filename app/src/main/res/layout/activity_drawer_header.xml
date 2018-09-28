@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_header"
     android:layout_width="match_parent"
     android:layout_height="160dp"
     android:background="@drawable/headerbg"
@@ -11,15 +12,15 @@
         android:layout_width="75dp"
         android:layout_height="75dp" />
     <TextView
+        android:id="@+id/nav_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/usernamestr"
         android:textColor="@color/secondaryTextColor"
         android:textStyle="bold"
         android:layout_marginTop="8dp"/>
     <TextView
+        android:id="@+id/nav_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/useremailstr"
         android:textColor="@color/secondaryTextColor"/>
 </LinearLayout>

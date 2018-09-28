@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,13 +14,21 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
-public class PatientHome extends AppCompatActivity {
+import com.example.user.mymedic.Database.UserDAO;
+import com.example.user.mymedic.Model.User;
+
+public class PatientHome extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener {
 
     LinearLayout MyProfile;
     LinearLayout DocView;
     LinearLayout MyDrugs;
     LinearLayout DrugManager;
+    NavigationView Menu;
+    TextView username;
+    TextView email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +37,34 @@ public class PatientHome extends AppCompatActivity {
 
         firstTime();
 
+        Menu = (NavigationView) findViewById(R.id.home_nav);
         MyProfile = (LinearLayout) findViewById(R.id.myProfile);
         MyDrugs = (LinearLayout) findViewById(R.id.myDrugs);
         DrugManager = (LinearLayout) findViewById(R.id.drugManager);
         DocView = (LinearLayout) findViewById(R.id.docView);
+
+        if(Menu!=null){
+            Menu.setNavigationItemSelectedListener(this);
+        }
+
+        View header = Menu.getHeaderView(0);
+
+        UserDAO UserData = new UserDAO(this);
+        User user;
+
+        UserData.Open();
+        user = UserData.findById(1);
+        UserData.close();
+
+        if(user==null){
+            return;
+        }
+
+        username = (TextView) header.findViewById(R.id.nav_username);
+        email = (TextView) header.findViewById(R.id.nav_email);
+
+        username.setText(user.getFirstName() + " " + user.getLastName());
+        email.setText(user.getEmail());
 
         MyProfile.setOnClickListener(
                 new View.OnClickListener() {
@@ -77,7 +110,7 @@ public class PatientHome extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
+    public boolean onNavigationItemSelected(MenuItem item){
         Intent intent = null;
         switch (item.getItemId()){
             case R.id.profile:
@@ -94,6 +127,8 @@ public class PatientHome extends AppCompatActivity {
             case R.id.docview:
                 intent = new Intent(PatientHome.this, PatientHome.class);
                 break;
+            case R.id.exit:
+                System.exit(0);
         }
         if(intent!=null){
             startActivity(intent);
