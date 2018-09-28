@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.user.mymedic.Model.User;
+
 public class PatientSignUp extends AppCompatActivity {
 
     private Button signUp;
+    public User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

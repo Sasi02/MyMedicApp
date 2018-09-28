@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/db" android:title="Dashboard"/>
+    <item android:id="@+id/profile" android:title="My Profile"/>
+    <item android:id="@+id/drugs" android:title="My Drugs"/>
+    <item android:id="@+id/drep" android:title="Drug Repository"/>
+    <item android:id="@+id/docview" android:title="Doctor View"/>
+    <item android:id="@+id/exit" android:title="Exit"/>
+
+</menu>
