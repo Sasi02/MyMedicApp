@@ -71,6 +71,10 @@
     <string name="close">Close</string>
     <string name="setting">Settings</string>
     <string name="drug_manager">Drug Manager</string>
+    <string name="numOfPills">No of Pills</string>
+    <string name="assignDrug">Assign Drug</string>
+    <string name="coveringMeals">Covering Meals</string>
+    <string name="beforeOrAfter">Before or After</string>
     <string name="dateOfBirth">Date of Birth</string>
     <string name="allegies">Allegies</string>
     <string name="operations">Operations</string>
