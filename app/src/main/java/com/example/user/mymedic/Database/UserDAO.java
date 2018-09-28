@@ -5,20 +5,17 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-
 import java.util.ArrayList;
 import java.util.Date;
-
+import com.example.user.mymedic.Helper.TypeConverter;
 import com.example.user.mymedic.Model.User;
 
 public class UserDAO {
 
     private SQLiteDatabase mDatabase;
     private DatabaseHandler dbHelper;
-    private Context mContext;
 
-    public UserDAO(Context context) {
-        this.mContext = context;
+    public UserDAO(Context context){
         dbHelper = new DatabaseHandler(context);
 
         try{
@@ -28,7 +25,7 @@ public class UserDAO {
         }
     }
 
-    private void Open() throws SQLException{
+    public void Open() throws SQLException{
         mDatabase = dbHelper.getWritableDatabase();
     }
 
@@ -36,13 +33,13 @@ public class UserDAO {
         dbHelper.close();
     }
 
-    public boolean add(User user){
+    public void add(User user){
         ContentValues values = new ContentValues();
 
         values.put(DatabaseMaster.Users.COLUMN_NAME_FNAME, user.getFirstName());
         values.put(DatabaseMaster.Users.COLUMN_NAME_LNAME, user.getLastName());
         values.put(DatabaseMaster.Users.COLUMN_NAME_INITIALS, user.getInitials());
-        values.put(DatabaseMaster.Users.COLUMN_NAME_DOB, user.getDob().toString());
+        values.put(DatabaseMaster.Users.COLUMN_NAME_DOB, TypeConverter.toString(user.getDob()));
         values.put(DatabaseMaster.Users.COLUMN_NAME_PHONE, user.getPhone());
         values.put(DatabaseMaster.Users.COLUMN_NAME_GENDER, user.getGender());
         values.put(DatabaseMaster.Users.COLUMN_NAME_BGROUP, user.getBloodGroup());
@@ -51,19 +48,15 @@ public class UserDAO {
         values.put(DatabaseMaster.Users.COLUMN_NAME_OPERATIONS, user.getOperations());
 
         try{
-            long newRowId = mDatabase.insert(DatabaseMaster.Users.TABLE_NAME, null, values);
-            return true;
+           long newRowId = mDatabase.insert(DatabaseMaster.Users.TABLE_NAME, null, values);
         }catch (Exception ex){
             ex.printStackTrace();
-            return false;
         }
-
     }
 
     public ArrayList<User> GetAll(){
         ArrayList<User> userList = new ArrayList<>();
         String sDate;
-        String[] dateSeparated;
         Date date;
 
         String[] projection ={
@@ -96,8 +89,7 @@ public class UserDAO {
             User tempUser = new User();
             sDate = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_DOB));
 
-            dateSeparated = sDate.split("/");
-            date = new Date(Integer.parseInt(dateSeparated[3]),Integer.parseInt(dateSeparated[2]),Integer.parseInt(dateSeparated[1]));
+            date = TypeConverter.toDate(sDate);
 
             tempUser.setId(cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_ID)));
             tempUser.setFirstName(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_FNAME)));
@@ -131,7 +123,6 @@ public class UserDAO {
     public ArrayList<User> searchByName(String name){
         ArrayList<User> userList = new ArrayList<>();
         String sDate;
-        String[] dateSeparated;
         Date date;
 
         String sqlQuery = "SELECT * FROM "+ DatabaseMaster.Users.TABLE_NAME +" WHERE "+
@@ -145,8 +136,7 @@ public class UserDAO {
                     User tempUser = new User();
                     sDate = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_DOB));
 
-                    dateSeparated = sDate.split("/");
-                    date = new Date(Integer.parseInt(dateSeparated[3]),Integer.parseInt(dateSeparated[2]),Integer.parseInt(dateSeparated[1]));
+                    date = TypeConverter.toDate(sDate);
 
                     tempUser.setId(cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_ID)));
                     tempUser.setFirstName(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_FNAME)));
@@ -171,19 +161,16 @@ public class UserDAO {
     public User findById(int id){
         User retUser = new User();
         String sDate;
-        String[] dateSeparated;
         Date date;
 
-        String sqlQuery = "SELET * FROM "+ DatabaseMaster.Users.TABLE_NAME +" WHERE "+
+        String sqlQuery = "SELECT * FROM "+ DatabaseMaster.Users.TABLE_NAME +" WHERE "+
                 DatabaseMaster.Users.COLUMN_NAME_ID +" = "+ id;
 
         Cursor cursor = mDatabase.rawQuery(sqlQuery, null);
 
-        if(cursor.getCount() == 1){
-            sDate = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_DOB));
-
-            dateSeparated = sDate.split("/");
-            date = new Date(Integer.parseInt(dateSeparated[3]),Integer.parseInt(dateSeparated[2]),Integer.parseInt(dateSeparated[1]));
+        if(cursor.moveToFirst() && cursor.getCount() == 1){
+            sDate = cursor.getString(cursor.getColumnIndex(DatabaseMaster.Users.COLUMN_NAME_DOB));
+            date = TypeConverter.toDate(sDate);
 
             retUser.setId(cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_ID)));
             retUser.setFirstName(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_FNAME)));
@@ -197,6 +184,7 @@ public class UserDAO {
             retUser.setAllergies(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_ALLERGIES)));
             retUser.setOperations(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseMaster.Users.COLUMN_NAME_OPERATIONS)));
         }
+        cursor.close();
         return retUser;
     }
 
@@ -223,10 +211,8 @@ public class UserDAO {
                 sqlQuery,
                 selectionArgs
         );
-        if(count == 0)
-            return false;
-        else
-            return true;
+
+        return count != 0;
     }
 
 }

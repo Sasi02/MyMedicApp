@@ -3,17 +3,19 @@ package com.example.user.mymedic.Model;
 import java.util.Date;
 
 public class Prescription {
-    int id;
-    String name;
-    String docName;
-    String disease;
-    String discription;
-    Date startDate;
-    Date endDate;
+    private int id;
+    private String name;
+    private String docName;
+    private String disease;
+    private String discription;
+    private Date startDate;
+    private Date endDate;
+    private int userId;
 
     public Prescription(){}
 
-    public Prescription(int id, String name, String docName, String disease, String discription, Date startDate, Date endDate) {
+    public Prescription(int id, String name, String docName, String disease, String discription,
+                        Date startDate, Date endDate, int userId) {
         this.id = id;
         this.name = name;
         this.docName = docName;
@@ -21,6 +23,15 @@ public class Prescription {
         this.discription = discription;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.userId = userId;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public int getId() {
