@@ -25,6 +25,10 @@ public class DataValidator {
         return text.matches("^[A-Za-z .]+$");
     }
 
+    public static boolean isParagraph(String text){
+        return text.matches("^[A-Za-z\n .\"':;,?-]+$");
+    }
+
     public static boolean isEmpty(String str){
         str = str.trim();
         return str.isEmpty();

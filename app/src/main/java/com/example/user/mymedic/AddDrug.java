@@ -96,14 +96,17 @@ public class AddDrug extends AppCompatActivity {
                 drug.setDosage(dosageValue);
 
                 drugData.Open();
-                drugData.add(drug);
-                ArrayList drugs = drugData.GetAll();
-                drugData.close();
+                try {
+                    drugData.add(drug);
+                }catch (Exception ex){
+                    ex.printStackTrace();
+                }
 
+                drugData.close();
+                finish();
             }
         });
 
-        //this.finish();
     }
 
     private void resetFields() {
