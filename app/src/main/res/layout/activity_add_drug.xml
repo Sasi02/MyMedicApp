@@ -40,7 +40,7 @@
             android:padding="10dp"/>
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/drugManufacturerEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
@@ -48,7 +48,7 @@
             android:padding="20dp"/>
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/drugNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
@@ -56,7 +56,7 @@
             android:padding="20dp"/>
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/dosageEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -64,7 +64,7 @@
             android:padding="20dp"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/saveBtn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="@string/save"
