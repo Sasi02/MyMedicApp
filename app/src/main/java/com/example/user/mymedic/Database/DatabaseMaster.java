@@ -15,6 +15,7 @@ public final class DatabaseMaster {
         public static final String COLUMN_NAME_INITIALS = "initials";
         public static final String COLUMN_NAME_DOB = "dob";
         public static final String COLUMN_NAME_PHONE = "phone";
+        public static final String COLUMN_NAME_EMAIL = "email";
         public static final String COLUMN_NAME_GENDER = "gender";
         public static final String COLUMN_NAME_BGROUP = "bloodGroup";
         public static final String COLUMN_NAME_GENDISEASES = "genDiseases";

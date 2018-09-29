@@ -39,6 +39,7 @@
         android:contentDescription="@string/notification_button"
         android:gravity="center"
         android:padding="18dp"
+        android:onClick="buttonClick"
         android:scaleType="fitCenter"
         android:src="@drawable/notification__bell"
         android:id="@+id/notificationButton"/>

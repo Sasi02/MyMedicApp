@@ -22,7 +22,7 @@ public class DataValidator {
     }
 
     public static boolean isText(String text){
-        return text.matches("^[A-Za-z .]+$");
+        return text.matches("^[A-Za-z .,:\n?']+$");
     }
 
     public static boolean isParagraph(String text){

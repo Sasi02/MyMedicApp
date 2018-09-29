@@ -76,4 +76,9 @@
     <string name="coveringMeals">Covering Meals</string>
     <string name="beforeOrAfter">Before or After</string>
     <string name="dateOfBirth">Date of Birth</string>
+    <string name="allegies">Allegies</string>
+    <string name="operations">Operations</string>
+    <string name="diseases">Diseases</string>
+    <string name="apply">Apply</string>
+    <string name="edit">Edit</string>
 </resources>

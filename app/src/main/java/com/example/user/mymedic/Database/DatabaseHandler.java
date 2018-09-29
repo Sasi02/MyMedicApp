@@ -18,6 +18,7 @@ public class DatabaseHandler extends SQLiteOpenHelper{
             " `"+ DatabaseMaster.Users.COLUMN_NAME_DOB +"` VARCHAR(50) , " +
             " `"+ DatabaseMaster.Users.COLUMN_NAME_PHONE +"` VARCHAR(50) , " +
             " `"+ DatabaseMaster.Users.COLUMN_NAME_GENDER +"` VARCHAR(20) , " +
+            " `"+ DatabaseMaster.Users.COLUMN_NAME_EMAIL +"` VARCHAR(50) , " +
             " `"+ DatabaseMaster.Users.COLUMN_NAME_BGROUP +"` VARCHAR(10) , " +
             " `"+ DatabaseMaster.Users.COLUMN_NAME_GENDISEASES +"` VARCHAR(255) , " +
             " `"+ DatabaseMaster.Users.COLUMN_NAME_ALLERGIES +"` VARCHAR(255) , " +
