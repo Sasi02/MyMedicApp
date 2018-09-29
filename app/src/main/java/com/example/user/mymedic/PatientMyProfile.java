@@ -216,4 +216,11 @@ public class PatientMyProfile extends AppCompatActivity {
                 }
         );
     }
+
+    public void buttonClick(View v){
+        switch(v.getId()){
+            case R.id.notificationButton:
+                startActivity(new Intent(this, Notification.class));
+        }
+    }
 }

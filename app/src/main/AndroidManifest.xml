@@ -23,6 +23,8 @@
         <activity android:name=".AddDrug" />
         <activity android:name=".DrugManRepSche" />
         <activity android:name=".NavMenu" />
+        <activity android:name=".Notification" />
+        <activity android:name=".DoctorView" />
         <activity android:name=".AssignDrug" />
         <activity android:name=".CustomListViewDrug" />
         <activity android:name=".CustomListViewSchedule"></activity>

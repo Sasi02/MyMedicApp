@@ -76,6 +76,16 @@ public class PatientHome extends AppCompatActivity implements
                 }
         );
 
+        DocView.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(PatientHome.this, DoctorView.class);
+                        startActivity(intent);
+                    }
+                }
+        );
+
         MyDrugs.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -135,6 +145,13 @@ public class PatientHome extends AppCompatActivity implements
             return true;
         }else{
             return false;
+        }
+    }
+
+    public void buttonClick(View v){
+        switch(v.getId()){
+            case R.id.notificationButton:
+                startActivity(new Intent(this, Notification.class));
         }
     }
 }

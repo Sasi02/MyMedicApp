@@ -1,11 +1,14 @@
 package com.example.user.mymedic;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.user.mymedic.Database.UserDAO;
@@ -28,6 +31,9 @@ public class DoctorView extends Activity {
     private Button operationsAddBtn;
     private Button operationsEditBtn;
     private Button applyBtn;
+    private String diseaseTemp;
+    private String allegiesTemp;
+    private String operationsTemp;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +93,108 @@ public class DoctorView extends Activity {
                 }
         );
 
+        operationsAddBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(DoctorView.this);
+                        builder.setTitle("Add Operation");
+
+// Set up the input
+                        final EditText input = new EditText(DoctorView.this);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                        input.setInputType(InputType.TYPE_CLASS_TEXT);
+                        builder.setView(input);
+
+// Set up the buttons
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                StringBuilder stringBuilder = new StringBuilder(operations.getText().toString());
+                                stringBuilder.append("[" + input.getText().toString() + "]");
+                                operations.setText(stringBuilder.toString());
+                            }
+                        });
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                        builder.show();
+                    }
+                }
+        );
+
+        diseaseAddBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(DoctorView.this);
+                        builder.setTitle("Add Disease");
+
+// Set up the input
+                        final EditText input = new EditText(DoctorView.this);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                        input.setInputType(InputType.TYPE_CLASS_TEXT);
+                        builder.setView(input);
+
+// Set up the buttons
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                StringBuilder stringBuilder = new StringBuilder(disease.getText().toString());
+                                stringBuilder.append("[" + input.getText().toString() + "]");
+                                disease.setText(stringBuilder.toString());
+                            }
+                        });
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                        builder.show();
+                    }
+                }
+        );
+
+        allegiesAddBtn.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(DoctorView.this);
+                        builder.setTitle("Add Allegies");
+
+// Set up the input
+                        final EditText input = new EditText(DoctorView.this);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                        input.setInputType(InputType.TYPE_CLASS_TEXT);
+                        builder.setView(input);
+
+// Set up the buttons
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                StringBuilder stringBuilder = new StringBuilder(allegies.getText().toString());
+                                stringBuilder.append("[" + input.getText().toString() + "]");
+                                allegies.setText(stringBuilder.toString());
+                            }
+                        });
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                        builder.show();
+                    }
+                }
+        );
+
         OnButtonClick(user);
     }
 
@@ -113,11 +221,11 @@ public class DoctorView extends Activity {
                         User newuser = new User();
 
                         //Validate and Add
-                        if(!DataValidator.isEmpty(diseaseText) && DataValidator.isText(diseaseText))
+                        if(!DataValidator.isEmpty(diseaseText))
                             newuser.setGenDiseases(diseaseText);
-                        if(!DataValidator.isEmpty(allegiesText) && DataValidator.isText(allegiesText))
+                        if(!DataValidator.isEmpty(allegiesText))
                             newuser.setAllergies(allegiesText);
-                        if(!DataValidator.isEmpty(operationsText) && DataValidator.isText(operationsText))
+                        if(!DataValidator.isEmpty(operationsText))
                             newuser.setOperations(operationsText);
 
                         if(!user.equals(newuser)){
@@ -135,5 +243,12 @@ public class DoctorView extends Activity {
                     }
                 }
         );
+    }
+
+    public void buttonClick(View v){
+        switch(v.getId()){
+            case R.id.notificationButton:
+                startActivity(new Intent(this, Notification.class));
+        }
     }
 }
