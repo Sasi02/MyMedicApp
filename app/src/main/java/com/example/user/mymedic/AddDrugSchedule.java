@@ -182,8 +182,7 @@ public class AddDrugSchedule extends AppCompatActivity {
                 }
 
                 prescriptionData.close();
-
-                finish();
+                addDrugBtn.setClickable(true);
 
             }
         });

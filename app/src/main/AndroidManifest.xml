@@ -13,17 +13,17 @@
         <activity android:name=".PatientMyProfile" />
         <activity android:name=".SignUp"/>
         <activity android:name=".PatientSignUp" />
-        <activity android:name=".PatientHome" >
+        <activity android:name=".PatientHome" />
+        <activity android:name=".AddDrug" />
+        <activity android:name=".DrugManRepSche" />
+        <activity android:name=".NavMenu" />
+        <activity android:name=".AssignDrug" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddDrug" />
-        <activity android:name=".DrugManRepSche" />
-        <activity android:name=".NavMenu" />
-        <activity android:name=".AssignDrug" />
         <activity android:name=".CustomListViewDrug" />
         <activity android:name=".CustomListViewSchedule"></activity>
     </application>
